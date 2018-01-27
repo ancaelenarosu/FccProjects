@@ -1,0 +1,48 @@
+.background-container {
+    background-color: lightskyblue;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+.background-picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:  url("./assets/mountain-weather.jpg");
+    opacity: 0,5;
+    filter: alpha(opacity-50);
+}
+.main-container {
+    background-color: rgb(58, 64, 68);
+    box-shadow: 8px 8px 5px #0e0b0b;
+    height: 60%;
+    width: 45%;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border-radius: 12px;
+
+}
+.clock {
+    top: 30px;
+    left: 400px;
+}
+.quote {
+    font-family: inherit;
+    font-size: 40px;
+    padding-left: 1000px;
+    padding-top: 100px;
+    color: antiquewhite;
+}
+.icons {
+    padding-top: 20px;
+    font-size: 40px;
+    color: white;
+}
+.container-icons {
+    padding-top: 20px;
+    padding-left: 350px;
+}
