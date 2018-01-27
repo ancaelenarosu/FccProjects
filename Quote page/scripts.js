@@ -106,14 +106,6 @@ pictures = [
         "image": "./assets/bw.jpg" 
     },
     {
-        "name":"test3",
-        "image": "./assets/02.jpg"
-    },
-    {
-        "name":"test4",
-        "image": "./assets/03.jpg"
-    },
-    {
         "name":"test5",
         "image": "./assets/000011.jpg"
     },
@@ -207,21 +199,18 @@ pictures = [
 $(document).ready(function() {
     $("#quote-button").click(function() {
         var quoteNr = Math.floor(Math.random() * quotes.length);
-        var leftPosition = Math.floor(Math.random() * window.innerHeight);
-        var rightPosition = Math.floor(Math.random()* window.innerWidth);
+        var topPosition = Math.floor(Math.random() * window.innerHeight);
         var picturesNr = Math.floor(Math.random() * pictures.length);
          $("#background").fadeOut(1000, function(){
             $("#quoteText").text(quotes[quoteNr].text);
             $("#author").text(quotes[quoteNr].author);
-            /*$("#quote").css("left", leftPosition / 2);
-            $("#quote").css("top", rightPosition / 2);*/
+            $("#quote").css("top", topPosition / 2);
             
             $("#background").fadeIn(1000);
-            $("#picture").css("background-image", "url(" + pictures[picturesNr].image + ")");
-
-
-            
+            $("#background").css("background-image", "url(" + pictures[picturesNr].image + ")");
+            $("#twitter").attr("href", "https://twitter.com/intent/tweet?text=" + quotes[quoteNr].text.split(" ").join("%20") + "  -" + quotes[quoteNr].author.split(" ").join("%20"));
         });
+        
         
     });
     
