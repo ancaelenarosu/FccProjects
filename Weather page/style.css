@@ -35,19 +35,20 @@
     font-family: monospace;
     font-size: 30px;
     color: antiquewhite;
-    margin-top: 600;
-    margin-left: 200;
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
 }
-.icons {
+.icon {
     font-size: 100px;
     color: white;
-    margin-left:450px;
+    margin-left:400px;
 }
 .container-icons {
-    padding-left: 350px;
+    padding-left: 315px;
 }
-.weather-button {
-    margin-left: 765px;
+.fahrenheit-button {
+    margin-left: 696px;
     font-family: monospace;
     padding: 10px;
     background-color: aliceblue; 
@@ -61,4 +62,35 @@
     transition-duration: 0.6s;
     background-color: rgb(58, 64, 68); 
     color: white;
+}
+.fahrenheit-button:hover {
+    background-color: rgb(58, 64, 68); 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.first-container {
+    background-color: black;
+    padding-top: 69px;
+    margin-top: 20px;
+    height: 600px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 12px;
+}
+.first-container:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.second-container {
+    background-color: black;
+    padding-top: 69px;
+    margin-top: 20px;
+    height: 600px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 5px #0e0b0b;
+}
+.second-container:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
