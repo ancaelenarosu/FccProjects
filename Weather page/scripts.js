@@ -37,7 +37,7 @@ function showWeather(result) {
 }
 
 function changeCity() {
-    city = "Washington";
+    city = "";
     return city;
 };
 
