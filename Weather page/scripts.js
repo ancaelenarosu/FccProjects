@@ -1,7 +1,7 @@
 pictures = [
     {
-        "name": "sunny",
-        "image": "./assets/sunny-weather.jpg"
+        "name": "cloudy",
+        "image": "./assets/cloudy-weather.jpg"
     },
     {
         "name": "mountain",
@@ -26,25 +26,30 @@ function getWeather(data) {
 };
 
 function showWeather(result) {
-    console.log(result.main);
+    console.log(result);
     if (result.main.temp > 250) {
-        $("#info").text("e cald");
+        $("#info").text("Warm");
     }
     else {
-        $("#info").text("e frig");
+        $("#info").text("Cold");
     }
-    $("#weather-info").text(result.main.temp);
     $("#background").fadeOut(0, function() {
         var picturesNr = Math.floor(Math.random() * pictures.length);
         $("#background").css("background-image", "url(" + pictures[picturesNr].image + ")");
+        $("#icon").css("weather-icons", "./weather-icons.min.css")
+        $("#temperature").text(result.main.temp);
+        $("#pressure").text(result.main.pressure);
+        $("#humidity").text(result.main.humidity);
     });
     $("#background").fadeIn(2000);
     var picturesNr = Math.floor(Math.random() * pictures.length);
     $("#background").css("background-image", "url(" + pictures[picturesNr].image + ")");
+
+
 }
 
 function changeCity() {
-    city = "";
+    city = "Bucharest";
     return city;
 };
 

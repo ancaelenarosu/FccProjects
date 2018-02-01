@@ -22,7 +22,7 @@
     position: relative;
     left: 80px;
     opacity: 0.6;
-    filter: alpha(opacity=60);
+    filter: alpha(opacity= 60);
     border-radius: 12px;
     margin-left: 100px;
     display: inline-block;
@@ -36,8 +36,7 @@
     font-size: 30px;
     color: antiquewhite;
     position: absolute;
-    bottom: 10px;
-    left: 70px;
+    left: 295px;
 }
 .icon {
     font-size: 100px;
@@ -93,4 +92,35 @@
 }
 .second-container:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.local-location {
+    font-family: monospace;
+    font-size: 40px;
+    color: white;
+    margin-left: 235px;
+    position: inline-block;
+}
+.icon-box {
+    
+
+}
+.weather-icons {
+    width: 30px;
+    font-size: 50px;
+    color: white;
+}
+.temperature-icon {
+    font-family: monospace;
+    font-size: 20px;
+    color: rgb(151, 151, 151);
+    margin-left: 180px;
+    position: inline-block;  
+
+}
+.more-info {
+    margin-left: 80px;
+    margin-top: 50px;
+    font-family: monospace;
+    font-size: 20px;
+    color: rgb(151, 151, 151);
 }
