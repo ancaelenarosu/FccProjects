@@ -26,7 +26,14 @@ function getWeather(data) {
 };
 
 function showWeather(result) {
-    console.log(result.main.temp);
+    console.log(result.main);
+    if (result.main.temp > 250) {
+        $("#info").text("e cald");
+    }
+    else {
+        $("#info").text("e frig");
+    }
+    $("#weather-info").text(result.main.temp);
     $("#background").fadeOut(0, function() {
         var picturesNr = Math.floor(Math.random() * pictures.length);
         $("#background").css("background-image", "url(" + pictures[picturesNr].image + ")");
