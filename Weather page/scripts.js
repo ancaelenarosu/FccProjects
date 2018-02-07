@@ -21,11 +21,29 @@ pictures = [
     },
 ];
 
+function fahrenheitToCelsius(fahrenheit) {
+    var celsius = (5* (fahrenheit - 32)) / 9;
+    return celsius;
+};
+
 function getWeather(data) {
     $.getJSON('http://api.openweathermap.org/data/2.5/weather', { q: data.city, appid: "e107aadc09226b858fa632ec65fe4b33" }, showWeather);
 };
 
 function showWeather(result) {
+    var degrees = fahrenheitToCelsius(result.main.temp);
+    $("#btn").click(function() {
+        var type = $("#btn").text();
+        console.log(type);
+        if (type == "Fahrenheit") {
+            $("#btn").text("Celsius");
+            $("#fahrenheit-celsius").text(degrees);
+        }
+        else { 
+            $("#btn").text("Fahrenheit");
+            $("#fahrenheit-celsius").text(result.main.temp);
+        }
+        });
     console.log(result);
     if (result.main.temp > 250) {
         $("#info").text("Warm");
@@ -40,12 +58,17 @@ function showWeather(result) {
         $("#temperature").text(result.main.temp);
         $("#pressure").text(result.main.pressure);
         $("#humidity").text(result.main.humidity);
+        $("#minimum-temperature").text(result.main.temp_min);
+        $("#maximum-temperature").text(result.main.temp_max);
+        $("#wind").text(result.wind.speed);
+        $("#clouds").text(result.clouds.all);
+        $("#sunrise").text(result.sys.sunrise);
+        $("#sunset").text(result.sys.sunset);
+        $("#fahrenheit-celsius").text(result.main.temp);
     });
     $("#background").fadeIn(2000);
     var picturesNr = Math.floor(Math.random() * pictures.length);
     $("#background").css("background-image", "url(" + pictures[picturesNr].image + ")");
-
-
 }
 
 function changeCity() {
@@ -57,5 +80,7 @@ $(document).ready(function() {
     var positionData = {};
     positionData.city = changeCity();
 
-    getWeather(positionData);    
+    getWeather(positionData);   
+
+    
 });

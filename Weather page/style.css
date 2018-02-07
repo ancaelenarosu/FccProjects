@@ -47,6 +47,7 @@
     padding-left: 315px;
 }
 .fahrenheit-button {
+    width: 160px;
     margin-left: 696px;
     font-family: monospace;
     padding: 10px;
@@ -97,7 +98,7 @@
     font-family: monospace;
     font-size: 40px;
     color: white;
-    margin-left: 235px;
+    margin-left: 155px;
     position: inline-block;
 }
 .icon-box {
@@ -123,4 +124,12 @@
     font-family: monospace;
     font-size: 20px;
     color: rgb(151, 151, 151);
+}
+.temperature-text {
+    margin-left: 174px;
+    font-family: monospace;
+    font-size: 25px;
+    color: rgb(151, 151, 151);
+    position:  inline-block;
+
 }
