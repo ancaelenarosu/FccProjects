@@ -8,7 +8,7 @@
 .background-picture {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image:  url("./assets/mountain-weather.jpg");
+    background-image:  url("./assets/cloudy-weather.jpg");
     opacity: 0,5;
     filter: alpha(opacity-50);
 }
@@ -101,10 +101,6 @@
     margin-left: 155px;
     position: inline-block;
 }
-.icon-box {
-    
-
-}
 .weather-icons {
     width: 30px;
     font-size: 50px;
@@ -131,5 +127,14 @@
     font-size: 25px;
     color: rgb(151, 151, 151);
     position:  inline-block;
-
+}
+.fahrenheit-celsius {
+    margin-left: 198px;
+    font-family: monospace;
+    font-size: 25px;
+    color: rgb(151, 151, 151);
+    position:  inline-block;  
+}
+#info {
+    margin-left: 200px;
 }
